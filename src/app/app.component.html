@@ -1,0 +1,15 @@
+<!--Databinding : One way : Interpolation -->
+<h1>Bonjour {{ title }}</h1> 
+<input value="{{title}}">
+<!--Databinding : One way : EventBinding -->
+<button (click)="f(title)">Click me!</button>
+<!--Databinding : One way : PropertyBinding -->
+<input [value]="show ? title : image">
+<img [src]="image">
+<br>
+
+<input [value] = "title2" (keyup)="f2(i.value)" #i> {{title2}}
+<!---DataBinding : Two way databinding-->
+<input [(ngModel)]="title3"> {{title3}}
+<app-products></app-products>
+<app-product></app-product>
