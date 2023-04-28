@@ -1,5 +1,11 @@
 <!--Databinding : One way : Interpolation -->
 <h1>Bonjour {{ title }}</h1> 
+<a routerLink="home">Home</a>**
+<a [routerLink]="'products'">Products</a>**
+<a routerLink="product">Product</a>**
+<a routerLink="add/product">New Product</a>**
+<router-outlet></router-outlet>
+<h1>Contenu du html de AppComponent</h1>
 <input value="{{title}}">
 <!--Databinding : One way : EventBinding -->
 <button (click)="f(title)">Click me!</button>
@@ -11,5 +17,3 @@
 <input [value] = "title2" (keyup)="f2(i.value)" #i> {{title2}}
 <!---DataBinding : Two way databinding-->
 <input [(ngModel)]="title3"> {{title3}}
-<app-products></app-products>
-<app-product></app-product>

@@ -1,0 +1,79 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 3,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "products": [
+    {
+      "id": 1,
+      "title": "pdt1",
+      "price": 150,
+      "quantity": 20,
+      "like": 25
+    },
+    {
+      "id": 2,
+      "title": "pdt2",
+      "price": 150,
+      "quantity": 20,
+      "like": 25
+    },
+    {
+      "id": 3,
+      "title": "pdt3",
+      "price": 150,
+      "quantity": 20,
+      "like": 25
+    },
+    {
+      "title": "mon nouveau pdt",
+      "price": 1699,
+      "quantity": 555,
+      "id": 4
+    },
+    {
+      "title": "azertyuiop",
+      "price": 444,
+      "quantity": 44,
+      "like": 55,
+      "id": 5
+    },
+    {
+      "title": "azertyuiopsdfghjkl",
+      "price": 4440,
+      "quantity": 44555,
+      "like": 55,
+      "id": 6
+    },
+    {
+      "title": "zertyuiodfghjk",
+      "price": 555,
+      "quantity": 444,
+      "like": 4544,
+      "id": 7
+    }
+  ]
+}

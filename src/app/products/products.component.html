@@ -1,2 +1,22 @@
 <p>products works!</p>
 <app-product></app-product>
+Prix : <input type="number" [(ngModel)]="price"> {{price}}
+<ul>
+    <div *ngFor="let p of listProducts; let i=index; let f=first; 
+    let l=last; let ov=even; let o=odd">
+    <li *ngIf="p.price < price">
+   {{i}} ** {{f}} ** {{l}} ** {{ov}} ** {{o}}
+        {{p.id}} -- {{p.title}} -- {{p.like}} --
+         {{p.quantity}}  
+         <button (click)="like(p)">Like</button>
+         <button (click)="like2(i)">Like2</button>   
+        <button  [disabled]="p.quantity == 0" (click)="buy(p)">Buy1</button>
+        <button *ngIf="p.quantity != 0" (click)="buy(p)">Buy2</button>
+        <button [hidden]="p.quantity == 0" (click)="buy(p)">Buy3</button>
+        <a [routerLink]="['/product',p.id, p.title]">Details</a>
+    </li>
+</div> 
+</ul>
+<a routerLink="details">Details-concaténation</a><br>
+<router-outlet></router-outlet>
+<a routerLink="/details">Details</a>
