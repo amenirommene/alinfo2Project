@@ -21,4 +21,13 @@ export class ProductService {
   addProduct(p:Product):Observable<Product>{
     return this._http.post<Product>("http://localhost:3000/products",p);
    }
+   putProduct(p:Product):Observable<Product>{
+    return this._http.put<Product>("http://localhost:3000/products/"+p.id,p);
+   }
+   getProductById(id):Observable<Product>{
+    return this._http.get<Product>("http://localhost:3000/products/"+id);
+   }
+   deleteProduct(id):Observable<Product>{
+    return this._http.delete<Product>("http://localhost:3000/products/"+id);
+   }
 }

@@ -1,0 +1,45 @@
+<form ngForm #f="ngForm">
+    <table>
+        <div ngModelGroup="autres" #gpe="ngModelGroup">
+        <tr>
+            <td>Title</td>
+            <td><input name="title" type="text" required minlength="10" [(ngModel)]="p.title" #t="ngModel">
+            valid :{{t.valid}} -- touched : {{t.touched}} -- dirty : {{t.dirty}}
+        <div *ngIf="t.errors && t.touched">
+            <div *ngIf="t.errors['required']">
+                Le title est obligatoire
+            </div>
+            <div *ngIf="t.errors['minlength']">
+                Le title doit contenir au moins {{t.errors['minlength'].requiredLength}} caractères alors que vous avez écrit {{t.errors['minlength'].actualLength}}
+            </div>
+            </div>
+        </td>
+        </tr>
+        <tr>
+            <td>Price</td>
+            <td><input name="price" type="number" pattern="[1-9][0-9]*" [(ngModel)]="p.price" #price="ngModel">
+                <div *ngIf="price.invalid && price.touched">
+                    Le price doit contenir des chiffres </div></td>
+        </tr>
+        <tr>
+            <td>Quantity</td>
+            <td><input name="qte" type="number" required [(ngModel)]="p.quantity">
+            </td>
+        </tr>
+    </div>
+    <div>
+        <tr *ngIf="gpe.valid">
+            <td>Like</td>
+            <td><input name="like" type="number" required [(ngModel)]="p.like"></td>
+        </tr>
+    
+        <tr>
+            <td></td>
+            <td>
+                <button (click)="update()">update</button></td>
+        </tr>
+    </div>
+    </table>
+
+</form>
+

@@ -28,38 +28,11 @@
   },
   "products": [
     {
-      "id": 1,
-      "title": "pdt1",
-      "price": 150,
-      "quantity": 20,
-      "like": 25
-    },
-    {
-      "id": 2,
-      "title": "pdt2",
-      "price": 150,
-      "quantity": 20,
-      "like": 25
-    },
-    {
       "id": 3,
       "title": "pdt3",
       "price": 150,
       "quantity": 20,
       "like": 25
-    },
-    {
-      "title": "mon nouveau pdt",
-      "price": 1699,
-      "quantity": 555,
-      "id": 4
-    },
-    {
-      "title": "azertyuiop",
-      "price": 444,
-      "quantity": 44,
-      "like": 55,
-      "id": 5
     },
     {
       "title": "azertyuiopsdfghjkl",
@@ -75,5 +48,6 @@
       "like": 4544,
       "id": 7
     }
-  ]
+  ],
+  "users": []
 }

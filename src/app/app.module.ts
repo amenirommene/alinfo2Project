@@ -10,7 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { DetailsComponent } from './details/details.component';
 import { AddProductComponent } from './add-product/add-product.component';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { UpdateProductComponent } from './update-product/update-product.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http'
     HomeComponent,
     NotFoundComponent,
     DetailsComponent,
-    AddProductComponent
+    AddProductComponent,
+    UpdateProductComponent
   ],
   imports: [
     BrowserModule,

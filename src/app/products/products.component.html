@@ -10,10 +10,12 @@ Prix : <input type="number" [(ngModel)]="price"> {{price}}
          {{p.quantity}}  
          <button (click)="like(p)">Like</button>
          <button (click)="like2(i)">Like2</button>   
-        <button  [disabled]="p.quantity == 0" (click)="buy(p)">Buy1</button>
+        <button (click)="delete(p.id)">delete</button>
+         <button  [disabled]="p.quantity == 0" (click)="buy(p)">Buy1</button>
         <button *ngIf="p.quantity != 0" (click)="buy(p)">Buy2</button>
         <button [hidden]="p.quantity == 0" (click)="buy(p)">Buy3</button>
         <a [routerLink]="['/product',p.id, p.title]">Details</a>
+        <a [routerLink]="['/update',p.id]">update</a>
     </li>
 </div> 
 </ul>

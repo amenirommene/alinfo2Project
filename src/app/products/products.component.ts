@@ -9,7 +9,7 @@ import { ProductService } from '../shared/product.service';
  // providers:[ProductService]
 })
 export class ProductsComponent implements OnInit {
-  price : number = 1500;
+  price : number = 150000;
   listProducts : Product[] ;
   //injecter le service ProductService
   constructor(private ps:ProductService) { }
@@ -19,7 +19,8 @@ export class ProductsComponent implements OnInit {
 //utile pour l'initialisation des proprités du composant
   ngOnInit(): void {
     //appeler la méthode getAllProducts() du service
-  this.ps.getAllProducts().subscribe(res=>{this.listProducts=res; console.log(this.listProducts) });
+  this.ps.getAllProducts().
+  subscribe(res=>{this.listProducts=res; console.log(this.listProducts) });
  
 /*this.listProducts=[
   {id: 1, title: "T-shirt 1", price: 18, quantity: 0, like: 0},
@@ -37,5 +38,10 @@ export class ProductsComponent implements OnInit {
 
   buy(p:Product){
    p.quantity -=1;
+  }
+
+  delete(id){
+    this.ps.deleteProduct(id).subscribe(res=>this.ps.getAllProducts().
+    subscribe(res=>{this.listProducts=res; console.log(this.listProducts) }));
   }
 }
